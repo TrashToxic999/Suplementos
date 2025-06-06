@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Power Suplementos - Sua Loja de Saúde & Performance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    header {
+      background: #4b2ac5;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 15px rgba(75, 42, 197, 0.3);
+    }
+
+    header h1 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 1.5px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 25px;
+      transition: color 0.3s ease;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #facc15;
+    }
+
+    /* BANNER */
+    .banner {
+      background: url('https://images.unsplash.com/photo-1554284126-4b18350d1438?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(3, 3, 3);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    /* SEÇÃO PRODUTOS */
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card-produto {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(75, 42, 197, 0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card-produto:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(75, 42, 197, 0.3);
+    }
+
+    .card-produto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 5px solid #4b2ac5;
+    }
+
+    .card-info {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-info h3 {
+      font-weight: 700;
+      color: #4b2ac5;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .card-info p {
+      flex-grow: 1;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .preco {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0e0d0b;
+      margin-bottom: 15px;
+    }
+
+    .btn-comprar {
+      background-color: #4b2ac5;
+      border: none;
+      border-radius: 12px;
+      padding: 14px;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+
+    .btn-comprar:hover {
+      background-color: #3a1c8f;
+      transform: scale(1.05);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #4b2ac5;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.6px;
+      margin-top: auto;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+      nav {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+      }
+      nav a {
+        margin: 0 15px;
+        font-size: 0.95rem;
+      }
+      .banner {
+        font-size: 1.8rem;
+        height: 220px;
+        padding: 0 15px;
+      }
+      main {
+        margin: 20px 10px 50px;
+        gap: 20px;
+      }
+      .card-produto img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Power Suplementos</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Produtos</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    Sua saúde e performance em primeiro lugar
+  </section>
+
+  <main>
+    <article class="card-produto">
+      <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnh6Zjl5c25pNmI5cTl1bWtxc3U3NGEyYThpZ2hzdWptMGRoYmx2ZiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/fZ9D4brPHgIALVpHhg/giphy.webp" alt="Whey Protein" />
+      <div class="card-info">
+        <h3>Whey Protein</h3>
+        <p>Proteína isolada de alta qualidade para maximizar seus resultados na musculação.</p>
+        <div class="preco">R$ 129,90</div>
+        <button class="btn-comprar" onclick="window.location.href='https://www.pagseguro.com.br/pagamento/pix'">Comprar</button>
+
+      </div>
+    </article>
+
+    <article class="card-produto">
+      <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGlrYWwxeG5hNjd4OTJ3cThiYXBhdmV0aW5tc3g0NDE3NzdiajRmcSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/wEnyHteY2CY7bl1Nja/giphy.webp" alt="Creatina" />
+      <div class="card-info">
+        <h3>Creatina</h3>
+        <p>Aumente sua força e resistência com nosso suplemento de creatina puro.</p>
+        <div class="preco">R$ 89,90</div>
+        <button class="btn-comprar" onclick="window.location.href='https://www.pagseguro.com.br/pagamento/pix'">Comprar</button>
+
+      </div>
+    </article>
+
+    <article class="card-produto">
+      <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGQxZ3NhMzlrY3gxcnp3bW95OTF5YTJhdjJnb3hyMzNkeG0ybWFtcCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/R2LOCZlGyQfFNyTDKl/giphy.webp" alt="BCAA" />
+      <div class="card-info">
+        <h3>BCAA</h3>
+        <p>Recupere seus músculos mais rápido e evite fadiga com aminoácidos essenciais.</p>
+        <div class="preco">R$ 79,90</div>
+        <button class="btn-comprar" onclick="window.location.href='https://www.pagseguro.com.br/pagamento/pix'">Comprar</button>
+
+      </div>
+    </article>
+
+    <article class="card-produto">
+      <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzFmMmYyenZjbDZrZGpvZTg2cDBhZ3IwcHE5M21hb2JybWhndXFzaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ZaJtrfCpkjMfYUv13l/giphy.webp" alt="Pré-treino" />
+      <div class="card-info">
+        <h3>Pré-treino</h3>
+        <p>Energia e foco para seus treinos intensos com ingredientes selecionados.</p>
+        <div class="preco">R$ 99,90</div>
+        <button class="btn-comprar" onclick="window.location.href='https://www.pagseguro.com.br/pagamento/pix'">Comprar</button>
+
+      </div>
+    </article>
+
+    <article class="card-produto">
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHJ0d2RydzY1NDY0eWF2Ynp6and4MnY5eXQ4cGVnMTZnMTk2aXhiNiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/dViABbBCDnflq86i5m/giphy.webp" alt="Multivitamínico" />
+      <div class="card-info">
+        <h3>Multivitamínico</h3>
+        <p>Suplemento completo para garantir suas vitaminas e minerais diários.</p>
+        <div class="preco">R$ 69,90</div>
+        <button class="btn-comprar" onclick="window.location.href='https://www.pagseguro.com.br/pagamento/pix'">Comprar</button>
+
+      </div>
+    </article>
+
+    <article class="card-produto">
+      <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXZuaHY0NDkycm85Z2UyN3pxODdlMTAyaTZpMTlnMm02eWZwenV6ZSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/BK1pLH4j4zrqq3c1MI/giphy.webp" alt="Omega 3" />
+      <div class="card-info">
+        <h3>Ômega 3</h3>
+        <p>Saúde cardiovascular e cerebral com cápsulas de alta concentração.</p>
+        <div class="preco">R$ 89,90</div>
+        <button class="btn-comprar" onclick="window.location.href='https://www.pagseguro.com.br/pagamento/pix'">Comprar</button>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2025 Power Suplementos - Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>

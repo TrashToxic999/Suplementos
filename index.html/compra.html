@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Power by Ismael - Suplementos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #111;
+      color: #ffcc00;
+      padding: 30px 20px;
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    header:hover {
+      transform: translateY(-5px);
+    }
+
+    main {
+      max-width: 1200px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .card-produto {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card-produto:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-produto img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 3px solid #ffcc00;
+    }
+
+    .info-produto {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #f9fafb;
+      border-radius: 0 0 15px 15px;
+    }
+
+    .info-produto h2 {
+      color: #111;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .info-produto p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .preco {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #ff5959;
+      margin-bottom: 15px;
+    }
+
+    .btn-comprar {
+      background-color: #ffcc00;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #111;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-comprar:hover {
+      background-color: #e6b800;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .card-produto img {
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Power by Ismael</h1>
+  </header>
+
+  <main>
+    <div class="card-produto">
+      <img src="https://cdn.awsli.com.br/600x450/832/832408/produto/163703579/creatina-growth-supplements-creapure-300g--1--5a98aeae.jpg" alt="Creatina Growth">
+      <div class="info-produto">
+        <h2>Creatina Growth</h2>
+        <p>Melhore sua performance com a creatina 100% pura Creapure.</p>
+        <div class="preco">R$ 119,90</div>
+        <a href="compra.html" class="btn-comprar">Comprar</a>
+      </div>
+    </div>
+
+    <div class="card-produto">
+      <img src="https://d2r9epyceweg5n.cloudfront.net/stores/001/151/342/products/whey-protein-1kg-growth-supplements-baunilha-01-51a9515477c1445b8416125292753896-640-0.jpg" alt="Whey Protein 1kg">
+      <div class="info-produto">
+        <h2>Whey Protein</h2>
+        <p>Whey concentrado com alto teor proteico. Ideal para o pós-treino.</p>
+        <div class="preco">R$ 139,90</div>
+        <a href="compra.html" class="btn-comprar">Comprar</a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
